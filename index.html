@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Guardian Angel</title>
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="libs/polyfill.js"></script>
+    <script src="src/svd.js"></script>
+    <script src="/src/posit1.js"></script>
+    <script src="/src/cv.js"></script>
+    <script src="src/aruco.js" defer></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="topContainer">
+      <div id="taskBar">
+        <div id="taskBarClock">
+          <div id="clock" class="clock"></div>
+          <div id="date" class="date"></div>
+        </div>
+      </div>
+
+      <div id="objectDetect"></div>
+    </div>
+
+    <video id="video1" autoplay style="display: none"></video>
+    <canvas id="canvas1" style="width: 1280px; height: 720px"></canvas>
+
+    <video id="video2" autoplay style="display: none"></video>
+    <canvas id="canvas2" style="width: 1280px; height: 720px"></canvas>
+
+    <div id="menuBar">
+      <button id="sleepButton" class="menuBarButtons"></button>
+      <button id="fallDetectionButton" class="menuBarButtons"></button>
+      <button id="objectDetectionButton" class="menuBarButtons"></button>
+      <button id="antiTheftDetectionButton" class="menuBarButtons"></button>
+      <button id="swapButton" class="menuBarButtons"></button>
+    </div>
+
+    <div id="sleepModal">
+      <div id="sleepBorder">
+        <div id="sleepClock">
+          <div id="clock2" class="clock"></div>
+          <div id="date2" class="date"></div>
+        </div>
+        <div id="bedRailStatus">Bed Rail Status: Disabled</div>
+      </div>
+
+      <button id="sleepModeDisable">Exit Sleep Mode</button>
+    </div>
+
+    <div id="fallDetectionModal" class="alertModal">
+      <div class="alertBackground">
+        <div class="alertBackGroundWarning"></div>
+        <div id="fallDetectionWarning">Fall Detected!</div>
+        <div id="fallDetectedContact">Emergency Contacts Alerted in 10...</div>
+        <button id="fallDetectionCancel" class="fallDetectionCancelButtons">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div id="fallDetectionLockModal" class="alertModal">
+      <div class="alertBackground">
+        <div class="alertBackGroundWarning"></div>
+        <div id="fallDetectionLockFailed">
+          Error: Could not detect user, fall detection disabled. Please Try
+          again.
+        </div>
+        <button id="fallDetectionLockCancel" class="fallDetectionCancelButtons">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div id="ATDPropertyConfirmModal" class="alertModal">
+      <div class="alertBackground">
+        <div id="ATFModalContent">
+          <div class="alertBackGroundWarning"></div>
+          <h2 id="ATFProtectionMSG">
+            Please select the items you want protected
+          </h2>
+
+          <form id="propertyForm">
+            <label>
+              <input type="checkbox" name="phoneProperty" value="88" />
+              Phone </label
+            ><br />
+            <label>
+              <input type="checkbox" name="keyProperty" value="89" />
+              Keys </label
+            ><br />
+            <button type="button" id="submitProperties">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="theftDetectionModal" class="alertModal">
+      <div class="alertBackground">
+        <div class="alertBackGroundWarning"></div>
+        <div id="theftDetectionWarning">Theft Detected!</div>
+        <div id="theftDetectedMSG"></div>
+        <button id="theftDetectionCancel" class="ATFDetectionCancelButtons">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div id="AFTDetectionLockModal" class="alertModal">
+      <div class="alertBackground">
+        <div class="alertBackGroundWarning"></div>
+        <div id="ATFDetectionLockFailed"></div>
+        <button id="ATFDetectionLockCancel" class="ATFDetectionCancelButtons">
+          Close
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

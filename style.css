@@ -1,0 +1,350 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/11-0-Color-Day-thumbnails.jpg?v=1731737384404");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#topContainer {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#taskBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  margin-top: 1rem;
+  width: 100%;
+  color: black;
+  z-index: 1;
+}
+
+#taskBarClock {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  margin-top: 4rem;
+  background-color: rgba(212, 212, 212, 0.25);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#clock {
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+
+#date {
+  font-size: 1.5rem;
+}
+
+#objectDetect {
+  margin-top: 6rem;
+  font-size: 2rem;
+  color: red;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: -1;
+}
+
+#canvas2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+#menuBar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0rem;
+  margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.menuBarButtons {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  width: 6rem;
+}
+
+#sleepButton {
+  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/sleeping-99119%201.svg?v=1731716801752")
+      center center no-repeat,
+    linear-gradient(to top, rgb(112, 112, 112), rgb(196, 194, 194));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#fallDetectionButton {
+  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/guy%20falling%20down.svg?v=1731715864523")
+      center center no-repeat,
+    linear-gradient(to top, rgb(166, 162, 2), rgb(255, 250, 3));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#objectDetectionButton {
+  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/obstacles.svg?v=1731717210913")
+      center center no-repeat,
+    linear-gradient(to top, rgb(1, 145, 42), rgb(8, 252, 77));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#antiTheftDetectionButton {
+  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/burglar-2022159_1920%201.svg?v=1731720859682")
+      center center no-repeat,
+    linear-gradient(to top, rgb(179, 2, 2), rgb(247, 5, 5));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#swapButton {
+  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/camera-1710849.svg?v=1731714995285")
+      center center no-repeat,
+    linear-gradient(to top, rgb(3, 128, 252), rgb(3, 232, 252));
+  background-size: 70%, 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sleepModal {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: none;
+}
+
+#sleepBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100vw - 10px);
+  height: calc(100vh - 10px);
+}
+
+#sleepClock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#clock2,
+#date2 {
+  color: white;
+  z-index: 11;
+}
+
+#clock2 {
+  font-size: 4.5rem;
+  margin-bottom: 0px;
+}
+
+#date2 {
+  font-size: 4rem;
+}
+
+#bedRailStatus {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 8rem;
+  margin: 2rem;
+}
+
+#sleepModeDisable {
+  position: absolute;
+  margin: 2rem;
+  bottom: 0;
+  background-color: white; 
+  color: black;
+  font-size: 1.25rem; 
+  padding: 0.75rem 1.5rem; 
+  border: none; 
+  border-radius: 1rem; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alertModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+}
+
+.alertBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+  background: linear-gradient(
+  to top,
+  rgba(145, 145, 145, 0.95),
+  rgba(180, 180, 180, 0.95) 50%,
+  rgba(200, 200, 200, 0.95)
+);
+  padding: 6rem;
+  border-radius: 1.5rem;
+}
+
+#fallDetectionWarning {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#fallDetectedContact {
+  color: white;
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.fallDetectionCancelButtons{
+  background-color: white; 
+  color: black;
+  font-size: 1.25rem; 
+  padding: 0.75rem 1.5rem; 
+  border: none; 
+  border-radius: 1rem; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alertBackGroundWarning{
+  background-image: url('https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/warning-98813%201.svg?v=1731744941604');
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  width: 8rem;
+  height: 8rem;
+}
+
+#ATFModalContent{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#propertyForm {
+  font-size: 1.5rem;
+  color: white; 
+}
+
+/*This is to style the check boxes*/
+#propertyForm input[type="checkbox"] {
+  width: 1.25rem; 
+  height: 1.25rem; 
+  margin-right: 10px; 
+}
+
+#fallDetectionLockFailed {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+#theftDetectionWarning {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#ATFProtectionMSG{
+  color: white;
+  font-size: 2rem;
+}
+
+#submitProperties{
+  margin-top: 2rem;
+  background-color: white; 
+  color: black;
+  font-size: 1rem; 
+  padding: 0.5rem 1rem; 
+  border: none; 
+  border-radius: 0.75rem; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#theftDetectedMSG {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#ATFDetectionLockFailed {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ATFDetectionCancelButtons{
+  background-color: white; 
+  color: black;
+  font-size: 1.25rem; 
+  padding: 0.75rem 1.5rem; 
+  border: none; 
+  border-radius: 1rem; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
