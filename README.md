@@ -8,9 +8,16 @@
 [![Watch the demo video](https://img.youtube.com/vi/8Nj8ePU1TnI/0.jpg)](https://www.youtube.com/watch?v=8Nj8ePU1TnI)
 
 
+## 🌐 Live Site Link:
+[**View the Live Site**](https://cpsc-581-individual-project.glitch.me)
+
+## 💻 Original Source Code:
+[**Access the Source Code**](https://glitch.com/edit/#!/cpsc-581-individual-project)
+
+
 ## Introduction 📝
 
-**Guardian Angel** is a proxemics-based program developed for the CPSC 581 (Human Computer Interaction II - Fall 2024) Individual Assignment. The goal of this program is to support individuals with limited mobility and visibility—especially those who use a wheelchair—by helping them feel safer and more secure in their daily lives.
+**Guardian Angel** is a proxemics-based program developed for the CPSC 581 Individual Assignment. The goal of this program is to support individuals with limited mobility and visibility—especially those who use a wheelchair—by helping them feel safer and more secure in their daily lives.
 
 My inspiration for this program was my grandmother. In the later stages of her life, she suffered from Parkinson’s disease, arthritis, and cataracts, which significantly reduced her ability to walk, move, or see clearly. She spent most of her time navigating her care facility in a wheelchair.
 
