@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-image: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/11-0-Color-Day-thumbnails.jpg?v=1731737384404");
+  background-image: url("./Assets/Pictures/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,7 +105,7 @@ body {
 }
 
 #sleepButton {
-  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/sleeping-99119%201.svg?v=1731716801752")
+  background: url("./Assets/Pictures/sleepMode.svg")
       center center no-repeat,
     linear-gradient(to top, rgb(112, 112, 112), rgb(196, 194, 194));
   background-size: contain;
@@ -114,7 +114,7 @@ body {
 }
 
 #fallDetectionButton {
-  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/guy%20falling%20down.svg?v=1731715864523")
+  background: url("./Assets/Pictures/FallMode.svg")
       center center no-repeat,
     linear-gradient(to top, rgb(166, 162, 2), rgb(255, 250, 3));
   background-size: contain;
@@ -123,7 +123,7 @@ body {
 }
 
 #objectDetectionButton {
-  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/obstacles.svg?v=1731717210913")
+  background: url("./Assets/Pictures/ObjectMode.svg")
       center center no-repeat,
     linear-gradient(to top, rgb(1, 145, 42), rgb(8, 252, 77));
   background-size: contain;
@@ -132,7 +132,7 @@ body {
 }
 
 #antiTheftDetectionButton {
-  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/burglar-2022159_1920%201.svg?v=1731720859682")
+  background: url("./Assets/Pictures/AntitheftMode.svg")
       center center no-repeat,
     linear-gradient(to top, rgb(179, 2, 2), rgb(247, 5, 5));
   background-size: contain;
@@ -141,7 +141,7 @@ body {
 }
 
 #swapButton {
-  background: url("https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/camera-1710849.svg?v=1731714995285")
+  background: url("./Assets/Pictures/camera.svg")
       center center no-repeat,
     linear-gradient(to top, rgb(3, 128, 252), rgb(3, 232, 252));
   background-size: 70%, 100%;
@@ -270,7 +270,7 @@ body {
 }
 
 .alertBackGroundWarning{
-  background-image: url('https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/warning-98813%201.svg?v=1731744941604');
+  background-image: url('./Assets/Pictures/alert.svg');
   background-size: contain; 
   background-repeat: no-repeat; 
   background-position: center; 
