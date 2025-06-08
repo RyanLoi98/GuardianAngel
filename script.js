@@ -75,39 +75,25 @@ let objDetectionAlertTime = 0; // controls how frequently the obj detection aler
 // audio files
 
 // fall detection alert audio file
-const fallAlertAudio = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/level-up-191997.mp3?v=1731474821298"
-);
+const fallAlertAudio = new Audio("./Assets/Sounds/General_Alert.mpga");
 
 // fall detection alarm audio file - played when a fall is actually confirmed
-const fallAlarmAudio = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/security-alarm-63578.mp3?v=1731474826307"
-);
+const fallAlarmAudio = new Audio("./Assets/Sounds/FD_Alarm.mpga");
 
 // anti-theft detection alert audio file
-const ATFAlertAudio = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/level-up-191997.mp3?v=1731474821298"
-);
+const ATFAlertAudio = new Audio("./Assets/Sounds/General_Alert.mpga");
 
 // anti-theft detection alarm audio file
-const ATFAlarmAudio = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/alert-102266.mp3?v=1731544553251"
-);
+const ATFAlarmAudio = new Audio("./Assets/Sounds/ATF_Alarm.mpga");
 
 // object detection audio file
-const objDetectionAlert = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/public-domain-beep-sound-100267.mp3?v=1731672906147"
-);
+const objDetectionAlert = new Audio("./Assets/Sounds/OD_Alarm.mpga");
 
 // this is for menu button presses
-const buttonPressSound = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/button_09-190435.mp3?v=1731736127514"
-);
+const buttonPressSound = new Audio("./Assets/Sounds/button.mpga");
 
 // this is for menu button presses disabling the button
-const buttonPressSoundOff = new Audio(
-  "https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/button-pressed-38129.mp3?v=1731735473019"
-);
+const buttonPressSoundOff = new Audio("./Assets/Sounds/buttonDisabled.mpga");
 
 // this function loads the program
 async function onLoad() {
@@ -423,7 +409,7 @@ function swapCameras() {
   // display the camera views normally
   if (frameMode === 0) {
     swapButton.style.background =
-      "url('https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/camera-1710849.svg?v=1731714995285') center center no-repeat, " +
+      "url('./Assets/Pictures/cameraEnabled.svg') center center no-repeat, " +
       "linear-gradient(to top, rgb(3, 128, 252), rgb(3, 232, 252))";
 
     swapButton.style.backgroundSize = "70%, 100%";
@@ -490,7 +476,7 @@ function swapCameras() {
     // disable both cams
     canvas2.style.display = "none";
     swapButton.style.background =
-      "url('https://cdn.glitch.global/07e03d19-30c0-487f-b678-1dd81ff3e84f/camera%20disabled.svg?v=1731714999557') center center no-repeat, " +
+      "url('./Assets/Pictures/cameraDisabled.svg') center center no-repeat, " +
       "linear-gradient(to top, rgb(3, 128, 252), rgb(3, 232, 252))";
 
     swapButton.style.backgroundSize = "70%, 100%";
@@ -520,7 +506,7 @@ function sleepMode(markers, canvasNum) {
       // get distance of sleep marker
       sleepMarkerDistance = showDistance(marker87);
       console.log(sleepMarkerDistance);
-      
+
       if (sleepMarkerDistance < 250) {
         document.getElementById("sleepBorder").style.border = "5px solid red";
         document.getElementById("bedRailStatus").innerHTML =
@@ -849,8 +835,7 @@ function antiTheftDetection(markers, canvasNum) {
     ATFDetectionEnabled = false;
     propertyDetectionLock = false;
     propertyDetectionTime = null;
-      
-    
+
     document.getElementById("antiTheftDetectionButton").style.border = "";
     document.getElementById("antiTheftDetectionButton").style.border = "";
     document.getElementById("antiTheftDetectionButton").disabled = false;
@@ -879,12 +864,12 @@ function antiTheftDetection(markers, canvasNum) {
     ATFAlarmAudio.loop = true;
     ATFAlarmAudio.play();
 
-     // reset everything
+    // reset everything
     phoneDetected1 = false;
     phoneDetected2 = false;
     keyDetected1 = false;
     keyDetected2 = false;
-    
+
     // if no object was detected upon the first time launching fall detection
   } else if (
     (checkPhone || checkKey) &&
@@ -949,7 +934,7 @@ function antiTheftDetection(markers, canvasNum) {
 
     ATFAlertAudio.currentTime = 0; // Reset the audio to the beginning
     ATFAlertAudio.play();
-          
+
     // reset everything
     phoneDetected1 = false;
     phoneDetected2 = false;
@@ -1021,7 +1006,7 @@ function objectDetection(markers, context, canvas) {
     const objDistance = showDistance(marker);
     // get the x coordinate position of the marker
     const objXcoordinate = getCornerPosition(marker, context, canvas);
-    
+
     console.log(objDistance);
     console.log(objXcoordinate);
 
