@@ -129,7 +129,7 @@ async function onLoad() {
 
 If your device currently has 2 webcams and this error is being displayed, please enable camera permissions in your browser and reload the page.
 
-Note: Guardian Nest will not function on mobile devices (phones or tablets), please utilize a desktop computer, laptop, or Windows tablet (e.g. Microsoft Surface).`);
+Note: Guardian Angel will not function on mobile devices (phones or tablets), please utilize a desktop computer, laptop, or Windows tablet (e.g. Microsoft Surface).`);
 
     return;
   }
