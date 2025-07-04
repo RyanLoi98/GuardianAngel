@@ -9,10 +9,8 @@
 
 
 ## 🌐 Live Site Link:
-[**View the Live Site**](https://cpsc-581-individual-project.glitch.me)
+[**View the Live Site**](https://guardianangel.vercel.app/)
 
-## 💻 Original Source Code:
-[**Access the Source Code**](https://glitch.com/edit/#!/cpsc-581-individual-project)
 
 
 ## Introduction 📝
@@ -57,9 +55,9 @@ These are the ArUco markers used for detection:
 
 ## How to Use 📚
 
-**Original Source Code:** https://glitch.com/edit/#!/cpsc-581-individual-project
+**Live Site:** [https://guardianangel.vercel.app/](https://guardianangel.vercel.app/)
 
-**Live Site:** https://cpsc-581-individual-project.glitch.me
+- It is highly recommended to use the live site to demo this application because all dependencies are setup properly, you can clone this project to your local machine but there is a chance issues will arise if JS Aruco and Google Media Pipe does not load properly.
 
 1. **Two webcams are required.** If you see an error and have two cameras, ensure permissions are granted and restart your browser.
 
@@ -67,7 +65,7 @@ These are the ArUco markers used for detection:
 
 3. Use this [link](https://damianofalcioni.github.io/js-aruco2/samples/marker-creator/marker-creator.html?dictionary=ARUCO_MIP_36h12) to generate the six markers listed above. Print them at **70mm x 70mm**. If using a different size, adjust the `markerSize` variable (line 10 in `script.js`) accordingly.
 
-4. Visit this link to try the program: [https://cpsc-581-individual-project.glitch.me](https://cpsc-581-individual-project.glitch.me).
+4. Visit this link to try the program: [https://guardianangel.vercel.app/](https://guardianangel.vercel.app/).
    The five buttons at the bottom (from left to right) are: Sleep Fall Prevention, Fall Detection, Object Detection, Anti-Theft Mode, and Camera Switch.
 
     **Note 1:** All features work with both front and rear cameras (even simultaneously, if available).
