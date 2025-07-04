@@ -57,7 +57,7 @@ These are the ArUco markers used for detection:
 
 **Live Site:** [https://guardianangel.vercel.app/](https://guardianangel.vercel.app/)
 
-- It is highly recommended to use the live site to demo this application because all dependencies are setup properly, you can clone this project to your local machine but there is a chance issues will arise if JS Aruco and Google Media Pipe does not load properly.
+- It is highly recommended to use the live site to demo this application because all dependencies are setup properly, you can clone this project to your local machine but there is a chance issues will arise if JS Aruco and/or Google Media Pipe do not load properly.
 
 1. **Two webcams are required.** If you see an error and have two cameras, ensure permissions are granted and restart your browser.
 
